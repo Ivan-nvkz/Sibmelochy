@@ -104,12 +104,12 @@
    background-size: cover;
    background-position: center;
    // width: 30px;
-   @include adaptiv-value("width", 30, 20, 0);
+   @include adaptiv-value("width", 30, 30, 0);
    // height: 30px;
-   @include adaptiv-value("height", 30, 20, 0);
+   @include adaptiv-value("height", 30, 30, 0);
    z-index: 10;
    // padding: 16px;
-    @include adaptiv-value("padding", 16, 0, 0);
+    @include adaptiv-value("padding", 16, 16, 0);
 }
 .banner-button-prev::after{
    background-image: url('../images/slider-banner/arrow-left.svg');

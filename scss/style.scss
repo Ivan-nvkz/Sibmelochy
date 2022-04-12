@@ -5,12 +5,15 @@
 @import "banner-section";
 @import "categories";
 @import "popular-products";
+@import "news";
+@import "about";
+@import "subscribe";
 
 .wrapper {
    display: flex;
    flex-direction: column;
    min-height: 100%;
-   
+   overflow: hidden;
 }
 
 .main {
