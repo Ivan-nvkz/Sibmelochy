@@ -2,6 +2,131 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
+   // Карта ==========================================================
+   const map = L.map('map',
+      {
+         scrollWheelZoom: false
+      })
+      .setView({
+         lat: 53.799322,
+         lng: 87.154358,
+      }, 15);
+   // Add OSM tile leayer to the Leaflet map.
+   L.tileLayer(
+      'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+      {
+         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+      },
+   ).addTo(map);
+
+   const points = [
+      {
+         title: `  ООО «Сибмелочи»
+         Кемеровская область,
+         г. Новокузнецк,
+         ул.
+         25 лет Октября, д.11
+                   `,
+         lat: 53.799316,
+         lng: 87.153153,
+      },
+      // {
+      //    title: `  'Galeon на Петроградка' 
+      //    Телефон: 8-888-888-8888 
+      //    E-mail: office@petr.ru
+      //    Любая дополнительная информацию.
+      //              `,
+      //    lat: 59.964892,
+      //    lng: 30.295253,
+      // },
+      // {
+
+      //    title: `  'Galeon Адмиралтейский ' 
+      //    Телефон: 8-888-888-8888 
+      //    E-mail: office@petr.ru
+      //    Любая дополнительная информацию.
+      //              `,
+      //    lat: 59.922885,
+      //    lng: 30.353926,
+      // },
+      // {
+      //    title: `  'Galeon Центр ' 
+      //    Телефон: 8-888-888-8888 
+      //    E-mail: office@petr.ru
+      //    Любая дополнительная информацию.
+      //              `,
+      //    lat: 59.914360,
+      //    lng: 30.339764,
+      // },
+      // {
+      //    title: `  'Galeon Фрунзенский ' 
+      //    Телефон: 8-888-888-8888 
+      //    E-mail: office@petr.ru
+      //    Любая дополнительная информацию.
+      //              `,
+      //    lat: 59.862096,
+      //    lng: 30.430944,
+      // },
+      // {
+      //    title: `  'Galeon Кировский ' 
+      //    Телефон: 8-888-888-8888 
+      //    E-mail: office@petr.ru
+      //    Любая дополнительная информацию.
+      //              `,
+      //    lat: 59.853198,
+      //    lng: 30.260817,
+      // },
+      // {
+
+      //    title: `  'Galeon Калининский ' 
+      //    Телефон: 8-888-888-8888 
+      //    E-mail: office@petr.ru
+      //    Любая дополнительная информацию.
+      //              `,
+      //    lat: 59.988482,
+      //    lng: 30.383335,
+      // },
+      // {
+      //    title: `  'Galeon Приморский ' 
+      //               Телефон: 8-888-888-8888 
+      //               E-mail: office@petr.ru
+      //               Любая дополнительная информацию.
+      //      `,
+      //    lat: 60.020656,
+      //    lng: 30.233370
+
+      // },
+   ];
+
+
+   points.forEach(({ lat, lng, title }) => {
+      const icon = L.icon({
+         iconUrl: "images/map-img.svg",
+         iconSize: [165, 38],
+         iconAnchor: [30, 0],
+      });
+
+
+      const marker = L.marker(
+         {
+            lat,
+            lng,
+            title,
+         },
+         {
+            icon,
+         },
+      );
+      marker.addTo(map)
+         .bindPopup(title);
+   });
+
+
+
+
+   // Карта ==========================================================
+
+
    // Slider news-slider start =====================================================================================
    const news = new Swiper('.news-slider', {
       // Optional parameters

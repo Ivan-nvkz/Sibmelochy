@@ -13,6 +13,9 @@
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+      integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+      crossorigin="" />
    <link rel="stylesheet" href="css/style.min.css">
 </head>
 
@@ -121,7 +124,6 @@
             </div>
          </div>
       </header>
-
 
       <main class="main">
 
@@ -503,7 +505,7 @@
          <section class=" new-products">
             <div class="container">
                <div class="popular-products__inner">
-                  <h3 class="popular-products__title new-products__title title-section">
+                  <h3 class="new-products__title title-section">
                      Новинки
                   </h3>
                   <div class="new-products__slider">
@@ -815,18 +817,169 @@
          </section>
 
 
+         <section class="contacts">
+            <div class="container">
+               <div class="contacts__inner">
+                  <h3 class="contacts__title title-section">
+                     Контакты
+                  </h3>
+                  <div class="contacts__body">
+                     <div class="address__box">
+                        <p class="contacts__address">
+                           ООО «Сибмелочи»
+                           Кемеровская область,
+                           г. Новокузнецк,
+                           ул.
+                           25 лет Октября, д.11
+                        </p>
+                        <ul class="contacts__list">
+                           <li class="contacts__list-item">
+                              <a class="contacts__phone" href="tel:83843744980">
+                                 8 (384) 374-49-80
+                              </a>
+                           </li>
+                           <li class="contacts__list-item">
+                              <a class="contacts__mail" href="mailto:info@tysyacha-melochey.ru">
+                                 info@tysyacha-melochey.ru
+                              </a>
+                           </li>
+                        </ul>
+                     </div>
+                     <div class="map-page">
+                        <div id="map" style="  height:500px;"></div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+
 
       </main>
 
 
-      <footer class="footer">я футер</footer>
+      <footer class="footer">
+         <div class="container">
+            <div class="footer__inner">
+               <div class="footer-top">
+                  <a class="footer__logo" href="#">
+                     <img class="logo__img footer-logo__img" src="images/logo.png" alt="логотип">
+                  </a>
+                  <div class="footer-top__blocks">
+                     <div class="footer-top__block">
+                        <ul class="footer-menu__list">
+                           <li class="footer-menu__item">
+                              <a class="footer-menu__link" href="#">Каталог</a>
+                           </li>
+                           <li class="footer-menu__item">
+                              <a class="footer-menu__link" href="#">Новости</a>
+                           </li>
+                           <li class="footer-menu__item">
+                              <a class="footer-menu__link" href="#">О нас</a>
+                           </li>
+                        </ul>
+                     </div>
+                     <div class="footer-top__block">
+                        <ul class="footer-menu__list">
+                           <li class="footer-menu__item">
+                              <a class="footer-menu__link" href="#">доставка</a>
+                           </li>
+                           <li class="footer-menu__item">
+                              <a class="footer-menu__link" href="#">оплата</a>
+                           </li>
+                           <li class="footer-menu__item">
+                              <a class="footer-menu__link" href="#">Контакты</a>
+                           </li>
+                        </ul>
+                     </div>
+                  </div>
+                  <div class="footer-top__social">
+                     <div class="footer-top__phone">
+                        <a class="footer-top__phone-link" href="tel:83843744980">8 (384) 374-49-80</a>
+                     </div>
+                     <div class="social__body">
+                        <ul class="social__list">
+                           <li class="social__item">
+                              <a class="social__link" href="#">
+                                 <img class="social__img" src="images/icons/social-vk.svg" alt="vk">
+                              </a>
+                           </li>
+                           <li class="social__item">
+                              <a class="social__link" href="#">
+                                 <img class="social__img" src="images/icons/social-ok.svg" alt="ok">
+                              </a>
+                           </li>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+               <div class="footer-bottom">
+                  <div class="footer-bottom__inner">
+                     <p class="description">
+                        © 2022 СибМелочи <br>
+                        <a class="description__link" href="#">Политика конфиденциальности</a>
+                     </p>
+                     <p class="description description-copy">
+                        <a class="description__link-copy" href="#">Разработка сайта: DevStarter</a>
+
+                     </p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </footer>
 
 
    </div>
 
 
 
+
+
+
+   <!-- <div class="card">
+      <div class="swiper-slide popular__slide">
+         <div class="popular__slide-item popular__slide-item-tech ">
+            <div class="popular-item__wrapper  popular-item__wrapper-tech">
+               <div class="tech-body-top">
+                  <button class="popular-item__favorite"></button>
+                  <button class="popular-item__variable-btn popular-item__variable-btn--color6">Акция</button>
+                  <a class="popular-item__link" href="#">
+                     <img class="popular-item__img" src="images/slider-popular/6.png" alt="изображение термометра">
+                  </a>
+               </div>
+               <div class="tech-body">
+                  <h4 class="popular-item__title popular-item__title-tech">
+                     Бульонница стекло 600мл с ручкой
+                  </h4>
+                  <p class="price popular-item__price popular-item__price-tech">
+                     175,00 ₽
+                  </p>
+                  <button class="popular-item__basket">
+                     <img class="basket__img" src="images/icons/basket-card.svg" alt="иконка корзина">
+                  </button>
+               </div>
+            </div>
+         </div>
+      </div>
+
+
+   </div> -->
+
+
+
+
+
+
+
+
+
+
+
+
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+   <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+      integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+      crossorigin=""></script>
    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
    <script src="js/main.min.js"></script>
 </body>

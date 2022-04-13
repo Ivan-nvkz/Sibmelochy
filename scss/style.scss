@@ -8,12 +8,14 @@
 @import "news";
 @import "about";
 @import "subscribe";
+@import "contacts";
+@import "footer";
 
 .wrapper {
    display: flex;
    flex-direction: column;
    min-height: 100%;
-   overflow: hidden;
+   // overflow: hidden;
 }
 
 .main {

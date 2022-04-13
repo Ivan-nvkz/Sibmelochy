@@ -1,5 +1,7 @@
 .about {
-   padding: 35px 0 30px;
+   padding-bottom:30px;
+   // padding-top: 35px;
+   @include adaptiv-value("padding-top", 35, 0, 0);
    margin-bottom: 75px;
 }
 .container {
