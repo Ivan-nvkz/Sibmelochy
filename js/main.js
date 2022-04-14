@@ -2,6 +2,19 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
+
+   // Каталог ========================================================
+   const catalogBtn = document.querySelector('.catalog__btn-push');
+   const catalogBody = document.querySelector('.catalog__body');
+
+   catalogBtn.addEventListener('click', function () {
+
+      catalogBody.classList.toggle('catalog__body--active');
+
+   });
+
+   // Каталог ========================================================
+
    // Карта ==========================================================
    const map = L.map('map',
       {
