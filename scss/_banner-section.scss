@@ -39,6 +39,12 @@
    @include adaptiv-value("padding-left", 40, 25, 0);
    background: rgba(0, 0, 0, 0.8);
    border-radius: 6px;
+   transition: all 0.3s;
+}
+.action__link:hover{
+   color: #000;
+   background: #FF1616;
+   transition: all 0.3s;
 }
 .discounts {
    font-family: 'Open Sans';
@@ -65,7 +71,14 @@
    padding: 15px 20px;
    background: #FF1616;
    border-radius: 10px; 
+   transition: all 0.3s;
 }
+
+.more-block__link:hover{
+   background: radial-gradient(152% 473.2% at 79.23% -14%, #FF6B00 0%, rgba(255, 107, 0, 0) 100%) , #FF1616;
+   transition: all 0.3s;
+}
+
 .banner-slide__picture {
    // padding: 42px 28px 42px 39px;
    @include adaptiv-value("padding-top", 42, 10, 0);

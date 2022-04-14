@@ -34,10 +34,12 @@
 .categories__item-text--white{
    color: #fff;
    background: #FF1616;
+   transition: all 0.3s;
 }
+
 .categories__item-text:hover{
    color: #fff;
-   background: #FF1616;
+   background: radial-gradient(152% 473.2% at 79.23% -14%, #FF6B00 0%, rgba(255, 107, 0, 0) 100%) , #FF1616;
    transition: all 0.3s;
 }
 // АДАПТИВ start ===================================================================================================
