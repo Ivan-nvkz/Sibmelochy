@@ -35,7 +35,9 @@
    transition: all 0.3s;
    border-bottom: 1px solid #000;
 }
-
+#map{
+   height: 500px;
+}
 // АДАПТИВ start ===================================================================================================
 @media (max-width: 500px){
    .address__box {
@@ -65,5 +67,8 @@
    .contacts__list-item {
       text-align: center;
       
+   }
+   #map{
+      height: 300px;
    }
 }
