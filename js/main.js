@@ -2,6 +2,32 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
+   // В момент достижения блока шапка отлипает. Вариант №1 Тима start Работает ===================
+   let lastScroll = 0;
+   const defaultOffset = 1000;
+   const header = document.querySelector('.header');
+   //  И offsetWidth  и  clientWidth , оба варианта работают.
+   // const headerWidth = header.clientWidth;
+   const headerWidth = header.offsetWidth;
+   // console.log(headerWidth);
+
+   const scrollPosition = () => window.pageYOffset || document.documentElement.scrollTop;
+   const containHide = () => header.classList.contains('hide');
+
+   window.addEventListener('scroll', () => {
+      if (scrollPosition() > lastScroll && !containHide() && scrollPosition() > defaultOffset && headerWidth >= 700) {
+         //scroll down
+         header.classList.add('hide');
+      }
+      else if (scrollPosition() < lastScroll && containHide()) {
+         //scroll up
+         header.classList.remove('hide');
+      }
+
+      lastScroll = scrollPosition();
+   });
+   // В момент достижения блока шапка отлипает. Вариант №1 end  ==================================
+
 
    // Каталог ========================================================
    const catalogBtn = document.querySelector('.catalog__btn-push');
@@ -194,17 +220,20 @@ document.addEventListener('DOMContentLoaded', () => {
    // const favoriteColor = document.querySelector('.popular-item__favorite');
    // favoriteColor.addEventListener('click', function () {
    //    favoriteColor.classList.toggle('popular-item__favorite--active');
+   //    console.log(789);
    // });
 
-   let favoriteColor = document.querySelectorAll('.popular-item__favorite');
-   favoriteColor.forEach((elem, index) => {
+   let favoriteColors = document.querySelectorAll('.popular-item__favorite');
+   favoriteColors.forEach((elem, index) => {
       elem.addEventListener('click', function () {
-         elem.classList.toggle('popular-item__favorite--active');
 
+         elem.classList.toggle('popular-item__favorite--active');
+         // console.log(789);
       });
       // console.log(elem);
    });
-   // console.log(favoriteColor);
+
+
    // ======================================================================================
    // Slider new-products start =====================================================================================
    const newProducts = new Swiper('.new-slider', {
