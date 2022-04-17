@@ -34,9 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
    const catalogBody = document.querySelector('.catalog__body');
 
    catalogBtn.addEventListener('click', function () {
-
       catalogBody.classList.toggle('catalog__body--active');
-
    });
 
    // Каталог ========================================================
@@ -69,82 +67,14 @@ document.addEventListener('DOMContentLoaded', () => {
          lat: 53.799316,
          lng: 87.153153,
       },
-      // {
-      //    title: `  'Galeon на Петроградка' 
-      //    Телефон: 8-888-888-8888 
-      //    E-mail: office@petr.ru
-      //    Любая дополнительная информацию.
-      //              `,
-      //    lat: 59.964892,
-      //    lng: 30.295253,
-      // },
-      // {
-
-      //    title: `  'Galeon Адмиралтейский ' 
-      //    Телефон: 8-888-888-8888 
-      //    E-mail: office@petr.ru
-      //    Любая дополнительная информацию.
-      //              `,
-      //    lat: 59.922885,
-      //    lng: 30.353926,
-      // },
-      // {
-      //    title: `  'Galeon Центр ' 
-      //    Телефон: 8-888-888-8888 
-      //    E-mail: office@petr.ru
-      //    Любая дополнительная информацию.
-      //              `,
-      //    lat: 59.914360,
-      //    lng: 30.339764,
-      // },
-      // {
-      //    title: `  'Galeon Фрунзенский ' 
-      //    Телефон: 8-888-888-8888 
-      //    E-mail: office@petr.ru
-      //    Любая дополнительная информацию.
-      //              `,
-      //    lat: 59.862096,
-      //    lng: 30.430944,
-      // },
-      // {
-      //    title: `  'Galeon Кировский ' 
-      //    Телефон: 8-888-888-8888 
-      //    E-mail: office@petr.ru
-      //    Любая дополнительная информацию.
-      //              `,
-      //    lat: 59.853198,
-      //    lng: 30.260817,
-      // },
-      // {
-
-      //    title: `  'Galeon Калининский ' 
-      //    Телефон: 8-888-888-8888 
-      //    E-mail: office@petr.ru
-      //    Любая дополнительная информацию.
-      //              `,
-      //    lat: 59.988482,
-      //    lng: 30.383335,
-      // },
-      // {
-      //    title: `  'Galeon Приморский ' 
-      //               Телефон: 8-888-888-8888 
-      //               E-mail: office@petr.ru
-      //               Любая дополнительная информацию.
-      //      `,
-      //    lat: 60.020656,
-      //    lng: 30.233370
-
-      // },
    ];
-
 
    points.forEach(({ lat, lng, title }) => {
       const icon = L.icon({
-         iconUrl: "images/map-img.svg",
+         iconUrl: "images/map-img-blue.svg",
          iconSize: [165, 38],
          iconAnchor: [30, 0],
       });
-
 
       const marker = L.marker(
          {
@@ -160,11 +90,7 @@ document.addEventListener('DOMContentLoaded', () => {
          .bindPopup(title);
    });
 
-
-
-
    // Карта ==========================================================
-
 
    // Slider news-slider start =====================================================================================
    const news = new Swiper('.news-slider', {
@@ -175,7 +101,6 @@ document.addEventListener('DOMContentLoaded', () => {
       spaceBetween: 30,
       slidesPerGroup: 1,
       speed: 800,
-
       // Responsive breakpoints
       breakpoints: {
          // when window width is >= 320px
@@ -215,24 +140,7 @@ document.addEventListener('DOMContentLoaded', () => {
    });
    // Slider news-slider end =======================================================================================
 
-
    // ======================================================================================
-   // const favoriteColor = document.querySelector('.popular-item__favorite');
-   // favoriteColor.addEventListener('click', function () {
-   //    favoriteColor.classList.toggle('popular-item__favorite--active');
-   //    console.log(789);
-   // });
-
-   let favoriteColors = document.querySelectorAll('.popular-item__favorite');
-   favoriteColors.forEach((elem, index) => {
-      elem.addEventListener('click', function () {
-
-         elem.classList.toggle('popular-item__favorite--active');
-         // console.log(789);
-      });
-      // console.log(elem);
-   });
-
 
    // ======================================================================================
    // Slider new-products start =====================================================================================
@@ -242,37 +150,42 @@ document.addEventListener('DOMContentLoaded', () => {
       loop: true,
       slidesPerView: 6,
       spaceBetween: 30,
-      slidesPerGroup: 1,
+      slidesPerGroup: 6,
       speed: 800,
-
       // Responsive breakpoints
       breakpoints: {
          // when window width is >= 320px
          320: {
             slidesPerView: 1,
-            spaceBetween: 10
+            spaceBetween: 10,
+            slidesPerGroup: 1,
          },
          // when window width is >= 480px
          480: {
             slidesPerView: 2,
-            spaceBetween: 30
+            spaceBetween: 30,
+            slidesPerGroup: 2,
          },
          // when window width is >= 640px
          640: {
             slidesPerView: 3,
-            spaceBetween: 30
+            spaceBetween: 30,
+            slidesPerGroup: 3,
          },
          800: {
             slidesPerView: 4,
-            spaceBetween: 30
+            spaceBetween: 30,
+            slidesPerGroup: 4,
          },
          1000: {
             slidesPerView: 5,
-            spaceBetween: 30
+            spaceBetween: 30,
+            slidesPerGroup: 5,
          },
          1200: {
             slidesPerView: 6,
-            spaceBetween: 30
+            spaceBetween: 30,
+            slidesPerGroup: 6,
          }
       },
 
@@ -284,8 +197,6 @@ document.addEventListener('DOMContentLoaded', () => {
    });
    // Slider new-products end =======================================================================================
 
-
-
    // Slider popular__slider start =====================================================================================
    const popular = new Swiper('.popular__slider', {
       // Optional parameters
@@ -293,37 +204,42 @@ document.addEventListener('DOMContentLoaded', () => {
       loop: true,
       slidesPerView: 6,
       spaceBetween: 30,
-      slidesPerGroup: 1,
+      slidesPerGroup: 6,
       speed: 800,
-
       // Responsive breakpoints
       breakpoints: {
          // when window width is >= 320px
          320: {
             slidesPerView: 1,
-            spaceBetween: 10
+            spaceBetween: 10,
+            slidesPerGroup: 1,
          },
          // when window width is >= 480px
          480: {
             slidesPerView: 2,
-            spaceBetween: 30
+            spaceBetween: 30,
+            slidesPerGroup: 2,
          },
          // when window width is >= 640px
          640: {
             slidesPerView: 3,
-            spaceBetween: 30
+            spaceBetween: 30,
+            slidesPerGroup: 3,
          },
          800: {
             slidesPerView: 4,
-            spaceBetween: 30
+            spaceBetween: 30,
+            slidesPerGroup: 4,
          },
          1000: {
             slidesPerView: 5,
-            spaceBetween: 30
+            spaceBetween: 30,
+            slidesPerGroup: 5,
          },
          1200: {
             slidesPerView: 6,
-            spaceBetween: 30
+            spaceBetween: 30,
+            slidesPerGroup: 6,
          }
       },
 
@@ -332,13 +248,13 @@ document.addEventListener('DOMContentLoaded', () => {
          nextEl: '.products__button-next',
          prevEl: '.products__button-prev',
       },
+
    });
    // Slider popular__slider end =======================================================================================
 
    // Slider banner-slider start =====================================================================================
    const banner = new Swiper('.banner-slider', {
       // Optional parameters
-      // direction: 'vertical',
       direction: 'horizontal',
       loop: true,
 
@@ -354,10 +270,6 @@ document.addEventListener('DOMContentLoaded', () => {
          prevEl: '.swiper-button-prev , .banner-button-prev',
       },
 
-      // And if we need scrollbar
-      // scrollbar: {
-      // el: '.swiper-scrollbar',
-      // },
    });
    // Slider banner-slider end =======================================================================================
    // Меню бургер ======================================================================================
@@ -567,11 +479,11 @@ $(document).ready(function () {
 
 // Slick slider start ====================================================================
 $(function () {
-   $('.your-class').slick({
-      dots: true,
+   $('.popular-item__favorite').on('click', function () {
+      $(this).toggleClass('popular-item__favorite--active');
    });
-
 });
+
 
 // Slick slider finish ====================================================================
 

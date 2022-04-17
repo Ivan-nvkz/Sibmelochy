@@ -4,8 +4,6 @@
    @include adaptiv-value("padding-top", 35, 0, 0);
    margin-bottom: 75px;
 }
-.container {
-}
 .about__inner {
    display: flex;
    justify-content: space-between;
@@ -13,20 +11,12 @@
 .about__title {
    padding-top: 10px;
 }
-.title-section {
-}
-.about-box {
-   
-}
 .about__info {
    @include adaptiv-value("font-size", 16, 14, 0);
    color: #545454;
    max-width: 553px;
    padding-right: 10px;
 }
-.about__img {
-}
-
 // АДАПТИВ start ===================================================================================================
 @media (max-width: 1000px){
    .about__inner{
