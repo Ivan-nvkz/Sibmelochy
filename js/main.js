@@ -2,7 +2,46 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
-   // Плавный скролл ======================================================
+   // Плавный скролл кнопки наверч  ====================================================
+   let btnUp = document.querySelector('.btn__up');
+
+   btnUp.addEventListener('click', function (e) {
+      scrollToY(0);
+   });
+
+   let scrolls = 0;
+   window.addEventListener('scroll', function (e) {
+      console.log(++scrolls);
+      let pos = window.pageYOffset;
+
+      if (pos > window.innerHeight) {
+         btnUp.classList.add('btn__up-open');
+      }
+      else {
+         btnUp.classList.remove('btn__up-open');
+      }
+
+      // for (let i = links.length - 1; i >= 0; i--) {
+      //    let link = links[i];
+      //    let header = document.querySelector(link.hash);
+
+      //    if (pos > (elemOffsetTop(header) - window.innerHeight / 2)) {
+      //       menu.querySelector('.menu__link-active').classList.remove('menu__link-active');
+      //       link.classList.add('menu__link-active');
+      //       break;
+      //    }
+      // }
+   });
+
+   function scrollToY(pos) {
+      window.scrollTo({
+         top: pos,
+         behavior: "smooth"
+      });
+   }
+   // Плавный скролл кнопки наверч  ====================================================
+
+   // Плавный скролл к пунктам ======================================================
    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function (e) {
          e.preventDefault();
