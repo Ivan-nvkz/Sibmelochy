@@ -21,7 +21,7 @@
    // padding: 69px 0px 83px 69px;
    @include adaptiv-value("padding-top", 69, 7, 0);
    @include adaptiv-value("padding-right", 0, 0, 0);
-   @include adaptiv-value("padding-bottom", 83, 41, 0);
+   @include adaptiv-value("padding-bottom", 69, 41, 0);
    @include adaptiv-value("padding-left", 69, 36, 0);
 }
 .action__link {
@@ -42,7 +42,7 @@
    transition: all 0.3s;
 }
 .action__link:hover{
-   color: #000;
+   color: #fff;
    background: linear-gradient(0deg, #4EC0FA, #4EC0FA), #0092DD;
    transition: all 0.3s;
 }
@@ -105,8 +105,11 @@
 .swiper-pagination-bullets.swiper-pagination-horizontal,
 .swiper-pagination-custom, 
 .swiper-pagination-fraction {
-   margin-bottom: -40px;
+   margin-bottom: -55px;
    left: 25%;
+}
+.swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+   margin: 0 var(--swiper-pagination-bullet-horizontal-gap,8px);
 }
 .banner-button-prev::after,
 .banner-button-next::after{
@@ -198,7 +201,7 @@
       display: flex;
       flex-direction: row;
       justify-content: space-evenly;
-      margin-top: 40px;  
+      margin-top: 80px;  
    }
    .swiper-horizontal>.swiper-pagination-bullets,
    .swiper-pagination-bullets.swiper-pagination-horizontal,

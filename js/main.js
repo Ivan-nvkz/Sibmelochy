@@ -2,7 +2,7 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
-   // Плавный скролл кнопки наверч  ====================================================
+   // Плавный скролл кнопки наверх  ====================================================
    let btnUp = document.querySelector('.btn__up');
 
    btnUp.addEventListener('click', function (e) {
@@ -21,16 +21,6 @@ document.addEventListener('DOMContentLoaded', () => {
          btnUp.classList.remove('btn__up-open');
       }
 
-      // for (let i = links.length - 1; i >= 0; i--) {
-      //    let link = links[i];
-      //    let header = document.querySelector(link.hash);
-
-      //    if (pos > (elemOffsetTop(header) - window.innerHeight / 2)) {
-      //       menu.querySelector('.menu__link-active').classList.remove('menu__link-active');
-      //       link.classList.add('menu__link-active');
-      //       break;
-      //    }
-      // }
    });
 
    function scrollToY(pos) {
@@ -39,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
          behavior: "smooth"
       });
    }
-   // Плавный скролл кнопки наверч  ====================================================
+   // Плавный скролл кнопки наверх  ====================================================
 
    // Плавный скролл к пунктам ======================================================
    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -80,12 +70,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
    // Каталог ========================================================
-   const catalogBtn = document.querySelector('.catalog__btn-push');
+   const catalogBtn = document.querySelector('.catalog__btn-push ');
    const catalogBody = document.querySelector('.catalog__body');
 
    catalogBtn.addEventListener('click', function () {
       catalogBody.classList.toggle('catalog__body--active');
    });
+
+   const catalogBtn2 = document.querySelector('.catalog__btn ');
+
+
+   catalogBtn2.addEventListener('click', function () {
+      catalogBody.classList.toggle('catalog__body--active');
+   });
+
 
    // Каталог ========================================================
 
