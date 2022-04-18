@@ -2,7 +2,18 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
-   // В момент достижения блока шапка отлипает. Вариант №1 Тима start Работает ===================
+   // Плавный скролл ======================================================
+   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+         e.preventDefault();
+         document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+         });
+      });
+   });
+   // Плавный скролл ======================================================
+
+   // В момент достижения блока шапка отлипает.  start  ===================
    let lastScroll = 0;
    const defaultOffset = 1000;
    const header = document.querySelector('.header');
@@ -26,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       lastScroll = scrollPosition();
    });
-   // В момент достижения блока шапка отлипает. Вариант №1 end  ==================================
+   // В момент достижения блока шапка отлипает. end  ==================================
 
 
    // Каталог ========================================================
