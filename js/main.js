@@ -199,7 +199,7 @@ document.addEventListener('DOMContentLoaded', () => {
       slidesPerView: 6,
       spaceBetween: 30,
       slidesPerGroup: 6,
-      speed: 800,
+      speed: 1000,
       // Responsive breakpoints
       breakpoints: {
          // when window width is >= 320px
@@ -231,10 +231,16 @@ document.addEventListener('DOMContentLoaded', () => {
             slidesPerGroup: 5,
          },
          1200: {
+            slidesPerView: 5,
+            spaceBetween: 30,
+            slidesPerGroup: 5,
+         },
+         1400: {
             slidesPerView: 6,
             spaceBetween: 30,
             slidesPerGroup: 6,
-         }
+         },
+
       },
 
       // Navigation arrows
@@ -253,7 +259,7 @@ document.addEventListener('DOMContentLoaded', () => {
       slidesPerView: 6,
       spaceBetween: 30,
       slidesPerGroup: 6,
-      speed: 800,
+      speed: 1000,
       // Responsive breakpoints
       breakpoints: {
          // when window width is >= 320px
@@ -285,10 +291,15 @@ document.addEventListener('DOMContentLoaded', () => {
             slidesPerGroup: 5,
          },
          1200: {
+            slidesPerView: 5,
+            spaceBetween: 30,
+            slidesPerGroup: 5,
+         },
+         1400: {
             slidesPerView: 6,
             spaceBetween: 30,
             slidesPerGroup: 6,
-         }
+         },
       },
 
       // Navigation arrows
@@ -305,7 +316,7 @@ document.addEventListener('DOMContentLoaded', () => {
       // Optional parameters
       direction: 'horizontal',
       loop: true,
-
+      speed: 1000,
       // If we need pagination
       pagination: {
          el: '.swiper-pagination , .swiper-pagination-one',
