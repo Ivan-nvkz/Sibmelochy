@@ -1,6 +1,6 @@
 .categories {
    // padding: 30px 0;
-   @include adaptiv-value("padding-top", 30, 30, 0);
+   @include adaptiv-value("padding-top", 32, 30, 0);
    @include adaptiv-value("padding-bottom", 30, 5, 0);
 }
 .categories__inner {
