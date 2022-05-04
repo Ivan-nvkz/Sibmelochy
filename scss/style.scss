@@ -10,6 +10,14 @@
 @import "subscribe";
 @import "contacts";
 @import "footer";
+@import "spollers";
+@import "breadcrumbs";
+@import "kitchen-products";
+@import "product-card";
+@import "tabs";
+@import "product-form";
+@import "star-rating";
+
 
 .wrapper {
    display: flex;
@@ -29,6 +37,7 @@
    max-width: 1420px;
    padding: 0 10px;
    margin: 0 auto;
+   
 }
 
 body {
@@ -39,6 +48,7 @@ body {
    // line-height: 21.79px;
    line-height: 1.361875;
    background-color: #fff;
+   color: #545454;
    /* Переводим в REM  */
    /* делим размер по макуту (16px) */
    /* на 16 (размер шрифта по умолчанию) */
