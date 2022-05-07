@@ -764,8 +764,15 @@ document.addEventListener('DOMContentLoaded', () => {
       iconMenu.addEventListener("click", function (e) {
          document.body.classList.toggle("_lock");
          iconMenu.classList.toggle("menu-open");
-         // menuBody.classList.toggle("menu-open");
+         menuBody.classList.toggle("menu-open");
          menuBody.classList.toggle('menu__list--active');
+         catalogBody.classList.add('catalog__body--active');
+      });
+   }
+   if (menuBody) {
+      menuBody.addEventListener('click', function () {
+         iconMenu.classList.remove("menu-open");
+         menuBody.classList.remove("menu__list--active");
       });
    }
    //Burger  end  ==========================================================================================
