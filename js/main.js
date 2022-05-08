@@ -773,6 +773,8 @@ document.addEventListener('DOMContentLoaded', () => {
       menuBody.addEventListener('click', function () {
          iconMenu.classList.remove("menu-open");
          menuBody.classList.remove("menu__list--active");
+         menuBody.classList.remove("menu-open");
+         document.body.classList.remove("_lock");
       });
    }
    //Burger  end  ==========================================================================================
